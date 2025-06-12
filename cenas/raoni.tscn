@@ -89,8 +89,10 @@ position = Vector2(-11, 25)
 shape = SubResource("RectangleShape2D_pn4rb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-12, 71)
 zoom = Vector2(0.5, 0.5)
 limit_left = 0
+limit_top = -500
 limit_bottom = 648
 
 [node name="AtaqueArea (Area2D)" type="Area2D" parent="." groups=["ataque"]]
