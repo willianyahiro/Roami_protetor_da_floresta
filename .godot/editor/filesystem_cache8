@@ -1,0 +1,59 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1749228434
+inimigo.2.tscn::PackedScene::3091385149849562554::1749749328::0::1::::<><>::res://Scripts/inimigo.gd<>uid://do3ix44ni4omk::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-1.png<>uid://jv6dnlwn0fkl::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-2.png<>uid://bie1hleqhj4h5::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-3.png<>uid://f6qhj10qbdbi::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-0.png<>uid://brokvj8hgl5wf::::res://sprit/Monstro.png
+inimigo.tscn::PackedScene::6713050880056533969::1749662004::0::1::::<><>::res://Scripts/inimigo.gd<>uid://do3ix44ni4omk::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-1.png<>uid://jv6dnlwn0fkl::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-2.png<>uid://bie1hleqhj4h5::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-3.png<>uid://f6qhj10qbdbi::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-0.png<>uid://brokvj8hgl5wf::::res://sprit/Monstro.png
+::res://cenas/::1749227568
+bandeira.tscn::PackedScene::9120985247400845503::1749749330::0::1::::<><>::uid://cs40tsvuamio1::::res://sprit/Flag.png
+barreira.tscn::PackedScene::9100807422392958873::1746636132::0::1::::<><>::
+fase1.tscn::PackedScene::8790930500334741052::1749749328::0::1::::<><>::uid://704v7phgffum::::res://sprit/Jungle Asset Pack/parallax background/plx-1.png<>uid://dosmeuec0y8v2::::res://sprit/Jungle Asset Pack/parallax background/plx-2.png<>uid://dpalg246qu5sj::::res://sprit/Jungle Asset Pack/parallax background/plx-3.png<>uid://bxbpurhhntp43::::res://sprit/Jungle Asset Pack/parallax background/plx-4.png<>uid://dl7wmj23l0gp7::::res://sprit/Jungle Asset Pack/parallax background/plx-5.png<>uid://bubphqebt3e5b::::res://sprit/Jungle Asset Pack/jungle tileset/jungle tileset.png<>uid://d27jkammf6016::::res://cenas/bandeira.tscn<>uid://c4c7i47mi7t46::::res://cenas/raoni.tscn<>uid://c2t04qvnhya3p::::res://cenas/inimigo.tscn<>uid://bkbqwq84buh11::::res://inimigo.2.tscn<>uid://c2v375dbtbbun::::res://inimigo.tscn
+flecha.tscn::PackedScene::8713755962334868893::1749749330::0::1::::<><>::res://Scripts/flecha.gd<>uid://dsj655jwy1h8n::::res://sprit/pixel-art-arrow-item-game-bit-white-background_360488-156-Photoroom.png
+game_over.tscn::PackedScene::6784634551086050178::1749749330::0::1::::<><>::
+inimigo.tscn::PackedScene::6708733909198069975::1749749328::0::1::::<><>::res://Scripts/inimigo.gd<>uid://do3ix44ni4omk::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-1.png<>uid://jv6dnlwn0fkl::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-2.png<>uid://bie1hleqhj4h5::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-3.png<>uid://f6qhj10qbdbi::::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-0.png<>uid://brokvj8hgl5wf::::res://sprit/Monstro.png
+raoni.tscn::PackedScene::6814405391685118789::1749749328::0::1::::<><>::res://Scripts/raoni.gd<>uid://dwfaj1p8su2ar::::res://cenas/flecha.tscn<>uid://chxq8mpn0qpuy::::res://sprit/indio paradinho.jpeg<>uid://byoj53w2ao4we::::res://sprit/ataque.png<>uid://de3txf0l2cum3::::res://sprit/indio ameçando taca.jpeg<>uid://7ucrgemht00b::::res://sprit/indio japa.png<>uid://c8y5aeef4wggp::::res://sprit/indio tacando quais tudo.jpeg<>uid://b0mxqbdgd5o44::::res://sprit/indio 1 que presta.png<>uid://b1hru3uc775ho::::res://sprit/indio tacando.jpeg<>uid://dj3p71d8twt4d::::res://sprit/indio 2 que presta.png<>uid://g2wwmab1x54u::::res://sprit/indio 3 que presta.png
+::res://defensor-da-floresta/::1749237906
+::res://Scripts/::1749228870
+flecha.gd::GDScript::-1::1749230410::0::1::::<>Area2D<>::
+inimigo.gd::GDScript::-1::1749664518::0::1::::<>CharacterBody2D<>::
+raoni.gd::GDScript::-1::1749669058::0::1::::<>CharacterBody2D<>::
+::res://sprit/::1749063098
+ataque.png::CompressedTexture2D::4100455752181602356::1746729506::1749228908::1::::<><>::
+Flag.png::CompressedTexture2D::6097660341412258358::1749059030::1749228908::1::::<><>::
+icon.svg::CompressedTexture2D::2297448544282983137::1746635686::1749228908::1::::<><>::
+indio 1 que presta.png::CompressedTexture2D::4167339428664316239::1748630898::1749228504::1::::<><>::
+indio 2 que presta.png::CompressedTexture2D::7849733492998885993::1748631050::1749228504::1::::<><>::
+indio 3 que presta.png::CompressedTexture2D::478246952855899742::1748631056::1749228504::1::::<><>::
+indio ameçando taca.jpeg::CompressedTexture2D::7499015000640315876::1749063098::1749228504::1::::<><>::
+indio japa.png::CompressedTexture2D::2287482665854822463::1748624118::1749228504::1::::<><>::
+indio paradinho.jpeg::CompressedTexture2D::5312675018355912428::1749063098::1749228504::1::::<><>::
+indio tacando quais tudo.jpeg::CompressedTexture2D::7140439999861120275::1749063098::1749228498::1::::<><>::
+indio tacando.jpeg::CompressedTexture2D::4226850669000307892::1749063098::1749228498::1::::<><>::
+Monstro.png::CompressedTexture2D::3609177509711386689::1746731760::1749228498::1::::<><>::
+pixel-art-arrow-item-game-bit-white-background_360488-156-Photoroom.png::CompressedTexture2D::8443178027579757915::1748624438::1749228498::1::::<><>::
+PODER.png::CompressedTexture2D::8792052032205193929::1746645852::1749228908::1::::<><>::
+::res://sprit/Jungle Asset Pack/::1748450990
+mockup.png::CompressedTexture2D::2320395445015663848::1747337858::1749228848::1::::<><>::
+::res://sprit/Jungle Asset Pack/Chacter with outline/::1748450850
+::res://sprit/Jungle Asset Pack/Chacter with outline/files/::1748450850
+::res://sprit/Jungle Asset Pack/Chacter with outline/sprites/::1748539104
+jump outline.png::CompressedTexture2D::687114136396235379::1747337858::1749228846::1::::<><>::
+landing outline.png::CompressedTexture2D::4807192143271228441::1747337858::1749228846::1::::<><>::
+pixil-frame-0.png::CompressedTexture2D::415924415039988574::1748538916::1749228846::1::::<><>::
+pixil-frame-1.png::CompressedTexture2D::8200236816906364450::1748538916::1749228846::1::::<><>::
+pixil-frame-2.png::CompressedTexture2D::676939810549362699::1748538916::1749228846::1::::<><>::
+pixil-frame-3.png::CompressedTexture2D::2957780670855639480::1748538916::1749228846::1::::<><>::
+::res://sprit/Jungle Asset Pack/Character/::1748450850
+::res://sprit/Jungle Asset Pack/Character/files/::1748450850
+::res://sprit/Jungle Asset Pack/Character/sprites/::1748450988
+jump.png::CompressedTexture2D::3862308407209169315::1747337858::1749228846::1::::<><>::
+landing.png::CompressedTexture2D::6944734487883461990::1747337858::1749228846::1::::<><>::
+::res://sprit/Jungle Asset Pack/jungle tileset/::1748538916
+jungle tileset.png::CompressedTexture2D::3793186036281391677::1747337858::1749228846::1::::<><>::
+::res://sprit/Jungle Asset Pack/jungle tileset/files/::1748450850
+::res://sprit/Jungle Asset Pack/jungle tileset/jogo top/::1748538916
+::res://sprit/Jungle Asset Pack/jungle tileset/jogo top/garimpo/::1748539104
+::res://sprit/Jungle Asset Pack/parallax background/::1748450988
+plx-1.png::CompressedTexture2D::2299452438976300784::1747337858::1749228846::1::::<><>::
+plx-2.png::CompressedTexture2D::8179801465445131641::1747337858::1749228846::1::::<><>::
+plx-3.png::CompressedTexture2D::8212774771694132261::1747337858::1749228846::1::::<><>::
+plx-4.png::CompressedTexture2D::4003775839938269370::1747337858::1749228846::1::::<><>::
+plx-5.png::CompressedTexture2D::7998757138303045358::1747337858::1749228848::1::::<><>::

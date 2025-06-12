@@ -1,0 +1,102 @@
+[gd_scene load_steps=16 format=3 uid="uid://c4c7i47mi7t46"]
+
+[ext_resource type="Script" path="res://Scripts/raoni.gd" id="1_5tm4t"]
+[ext_resource type="PackedScene" uid="uid://dwfaj1p8su2ar" path="res://cenas/flecha.tscn" id="2_sgiei"]
+[ext_resource type="Texture2D" uid="uid://chxq8mpn0qpuy" path="res://sprit/indio paradinho.jpeg" id="3_t5xo8"]
+[ext_resource type="Texture2D" uid="uid://byoj53w2ao4we" path="res://sprit/ataque.png" id="3_u74cy"]
+[ext_resource type="Texture2D" uid="uid://de3txf0l2cum3" path="res://sprit/indio ameçando taca.jpeg" id="4_68alp"]
+[ext_resource type="Texture2D" uid="uid://7ucrgemht00b" path="res://sprit/indio japa.png" id="4_dkbqm"]
+[ext_resource type="Texture2D" uid="uid://c8y5aeef4wggp" path="res://sprit/indio tacando quais tudo.jpeg" id="5_e1ck8"]
+[ext_resource type="Texture2D" uid="uid://b0mxqbdgd5o44" path="res://sprit/indio 1 que presta.png" id="5_to5vp"]
+[ext_resource type="Texture2D" uid="uid://b1hru3uc775ho" path="res://sprit/indio tacando.jpeg" id="6_bje4l"]
+[ext_resource type="Texture2D" uid="uid://dj3p71d8twt4d" path="res://sprit/indio 2 que presta.png" id="6_djlnr"]
+[ext_resource type="Texture2D" uid="uid://g2wwmab1x54u" path="res://sprit/indio 3 que presta.png" id="7_uwxrc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7paqp"]
+atlas = ExtResource("3_u74cy")
+region = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_40ngg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_t5xo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_68alp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e1ck8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bje4l")
+}],
+"loop": false,
+"name": &"atack.1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7paqp")
+}],
+"loop": false,
+"name": &"atack.2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_dkbqm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_to5vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_djlnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uwxrc")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn4rb"]
+size = Vector2(128, 180)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pbs4m"]
+radius = 22.0
+height = 146.0
+
+[node name="Raoni" type="CharacterBody2D"]
+script = ExtResource("1_5tm4t")
+bullet_scene = ExtResource("2_sgiei")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7.5, 18)
+scale = Vector2(0.338, 0.384)
+sprite_frames = SubResource("SpriteFrames_40ngg")
+animation = &"run"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 25)
+shape = SubResource("RectangleShape2D_pn4rb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_bottom = 648
+
+[node name="AtaqueArea (Area2D)" type="Area2D" parent="." groups=["ataque"]]
+position = Vector2(151, -39)
+
+[node name="ataque" type="CollisionShape2D" parent="AtaqueArea (Area2D)"]
+position = Vector2(-37, 67)
+shape = SubResource("CapsuleShape2D_pbs4m")
+debug_color = Color(1, 1, 1, 0.42)

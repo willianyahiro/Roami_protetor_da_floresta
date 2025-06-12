@@ -1,0 +1,101 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2v375dbtbbun"]
+
+[ext_resource type="Script" path="res://Scripts/inimigo.gd" id="1_5icc4"]
+[ext_resource type="Texture2D" uid="uid://do3ix44ni4omk" path="res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-1.png" id="2_6yxdx"]
+[ext_resource type="Texture2D" uid="uid://jv6dnlwn0fkl" path="res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-2.png" id="3_ganxx"]
+[ext_resource type="Texture2D" uid="uid://bie1hleqhj4h5" path="res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-3.png" id="4_1hag3"]
+[ext_resource type="Texture2D" uid="uid://f6qhj10qbdbi" path="res://sprit/Jungle Asset Pack/Chacter with outline/sprites/pixil-frame-0.png" id="5_cqkdy"]
+[ext_resource type="Texture2D" uid="uid://brokvj8hgl5wf" path="res://sprit/Monstro.png" id="6_vj22k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkekd"]
+atlas = ExtResource("6_vj22k")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfox5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6yxdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ganxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1hag3")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cqkdy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkekd")
+}],
+"loop": false,
+"name": &"morte",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5u8b"]
+size = Vector2(83, 149.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyr34"]
+size = Vector2(1329, 604)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mux82"]
+size = Vector2(197.75, 190.563)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0v37"]
+size = Vector2(144, 194)
+
+[node name="Inimigo" type="CharacterBody2D" groups=["inimigo"]]
+script = ExtResource("1_5icc4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -4.00001)
+scale = Vector2(0.608824, 0.5489)
+sprite_frames = SubResource("SpriteFrames_yfox5")
+animation = &"morte"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 33.75)
+shape = SubResource("RectangleShape2D_w5u8b")
+debug_color = Color(0.745098, 0.462745, 0, 0.827451)
+
+[node name="arma" type="Node2D" parent="."]
+
+[node name="area_para_perseguir_player" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_para_perseguir_player"]
+position = Vector2(-2.5, -19)
+shape = SubResource("RectangleShape2D_yyr34")
+debug_color = Color(0.988294, 0, 0.303609, 0.42)
+
+[node name="Area_Causar_dano" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Causar_dano"]
+position = Vector2(9, 14)
+shape = SubResource("RectangleShape2D_mux82")
+debug_color = Color(1, 1, 1, 0.42)
+
+[node name="Area_Sofrer_dano" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_Sofrer_dano"]
+position = Vector2(-2, 10)
+shape = SubResource("RectangleShape2D_y0v37")
+debug_color = Color(0.840309, 0.00113993, 0.922461, 0.42)
+
+[connection signal="body_entered" from="area_para_perseguir_player" to="." method="_on_area_persiguir_body_entered"]
+[connection signal="body_exited" from="area_para_perseguir_player" to="." method="_on_area_persiguir_body_exited"]
+[connection signal="body_entered" from="Area_Causar_dano" to="." method="_on_Hitbox_body_entered"]
+[connection signal="area_entered" from="Area_Sofrer_dano" to="." method="_on_morte_area_entered"]
+[connection signal="body_entered" from="Area_Sofrer_dano" to="." method="_on_morte_body_entered"]

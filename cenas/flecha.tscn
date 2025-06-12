@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwfaj1p8su2ar"]
+
+[ext_resource type="Script" path="res://Scripts/flecha.gd" id="1_pwvwr"]
+[ext_resource type="Texture2D" uid="uid://dsj655jwy1h8n" path="res://sprit/pixel-art-arrow-item-game-bit-white-background_360488-156-Photoroom.png" id="2_eu1ae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlget"]
+size = Vector2(8, 1.5)
+
+[node name="flecha" type="Area2D" groups=["ataque"]]
+scale = Vector2(10, 10)
+script = ExtResource("1_pwvwr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.785398
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_eu1ae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mlget")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
